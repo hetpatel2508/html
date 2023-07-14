@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#navbar{
+    background-color: rgb(37, 37, 37);
+    width: 100%;
+    height: 30px;
+}
+
+#logo{
+    color: orange  ;
+}
+
+a{
+    font-size: large;
+    color: white;
+    margin-right: 370px;
+}
+
+#button_search{
+    background-color: orange;
+    padding:5px 10px 5px 10px;
+}

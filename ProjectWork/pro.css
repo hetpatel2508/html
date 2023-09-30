@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+A{
+    text-decoration: none;
+    color: rgb(39, 38, 38);
+}
+
+#main_navbar{
+    position: sticky;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height: 69px;
+    width: 100%;
+
+}
+
+#nav_logo{
+    display:inline-block;
+    flex-direction: row;
+    width: 135px;
+    height: 50px;
+    background-image: url("Project_images/Titan-Logo.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin-left: 22px;
+    margin-top: 23px;
+}
+
+#nav_search_bar_div{
+    display:inline-block;
+    width: 300px;
+    height: 39px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    bottom: 25px;
+    left: 400px;
+    border-radius: 150px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    
+}
+
+
+#Search_bar{
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    border-style:none  ;
+    font-size: medium;
+    outline: none;
+}
+
+
+
+#search_bar_icon{
+    
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    left: 47px;
+    width: 35px;
+    height: 35px;
+    background-image: url("Project_images/search_FILL0_wght400_GRAD0_opsz24.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+#nav_option
+{
+    
+    display: inline-block;
+    width: 30%;
+}
+
+.nav_op1{
+    display: inline-block;
+    position: relative;
+    bottom: 30px;
+    margin-left: 25px;
+    font-size: 20px;
+    opacity:65% ;
+    
+    transition-property: all;
+    transition-timing-function:ease-in-out;
+    transition-delay: 0.1s;
+    transition-duration: 0.151s;
+}
+
+.nav_op1:hover{
+    color: #0492c2;
+    border-bottom-width: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color:#000000;
+    border-style: solid;
+}
+
+
+#nav_icons
+{
+    
+    display: inline-block;
+    position:absolute;
+    right: 0;
+    top: 22px;
+    width: 200px;
+    /* margin-left: 55px; */
+}
+
+#nav_profile{
+    
+    background-image: url("Project_images/person_FILL0_wght400_GRAD0_opsz24.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    display: inline-block;
+    position: relative;
+
+    left: 55px;
+    /* right: 15px; */
+    width: 35px;
+    height: 35px;
+    
+}
+#nav_like{
+    
+    background-image: url("Project_images/favorite_FILL0_wght400_GRAD0_opsz24.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    display: inline-block;
+    position: relative;
+    left: 65px;
+    width: 35px;
+    height: 35px;
+    
+}
+#nav_cart{
+    
+    background-image: url("Project_images/local_mall_FILL0_wght400_GRAD0_opsz24.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    display: inline-block;
+    position: relative;
+    
+    left: 75px;
+    width: 35px;
+    height: 35px;
+}
+
+#main_slider{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+#left_slider_button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 500px;
+}
+
+
+#right_slider_button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 500px;
+}
+
+#slider_box{
+    width: 80%;
+    height: 500px;
+    background-image: url("Project_images/img1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 20px;
+}
+
+#slider_btn1{
+    background-color: #c7c6c1;
+}
+
+#left_btn{
+    width: 25px;
+    height: 25px;
+    background-image: url("Project_images/arrow_back_ios_new_FILL0_wght400_GRAD0_opsz24.png");
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: 22.8px;
+    
+    border-style: solid;
+    border-color: rgb(11, 11, 11);
+    border-radius: 10px;
+}
+#left_btn:hover{
+    cursor: pointer;
+}
+
+#right_btn{
+    width: 25px;
+    height: 25px;
+    background-image: url("Project_images/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.png");
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: 22.8px;    
+    
+    border-style: solid;
+    border-color: rgb(11, 11, 11);
+    border-radius: 10px;
+}
+#right_btn:hover{
+    cursor: pointer;
+}
+
+#slider_rounds{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_btn{
+    /* background-color: aqua; */
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 8px;
+    height: 8px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 100%;
+}
+    

@@ -1,7 +1,14 @@
 //Code For Image Slider
 
+function updateButtonColors(num) {
+    for (let i = 1; i <= 6; i++) {
+        document.getElementById(`slider_btn${i}`).style.backgroundColor = "white";
+    }
+    document.getElementById(`slider_btn${num}`).style.backgroundColor = "gold";
+}
+
 function slider_b1() {
-    document.getElementById("slider_box").style.backgroundImage = 'url("Project_images/img1.jpg")';
+    document.getElementById("slider_box").style.backgroundImage = 'url("Project_images/img1.png")';
     updateButtonColors(1);
 }
 
@@ -30,26 +37,18 @@ function slider_b6() {
     updateButtonColors(6);
 }
 
-function updateButtonColors(num) {
-    for (let i = 1; i <= 6; i++) {
-        document.getElementById(`slider_btn${i}`).style.backgroundColor = "white";
-    }
-    document.getElementById(`slider_btn${num}`).style.backgroundColor = "#c7c6c1";
-}
-
 const fun_array = [slider_b1, slider_b2, slider_b3, slider_b4, slider_b5, slider_b6];
 
 let index = 0;
 
-function color_change(num) {
+function color_change(num) {  //it will only be used to set eventlistener nothing else
     index = num - 1;
-    if (num === 1) { document.getElementById("slider_box").style.backgroundImage = `url('Project_images/img${num}.jpg')`; }
-    else { document.getElementById("slider_box").style.backgroundImage = `url('Project_images/img${num}.png')`; }
+    document.getElementById("slider_box").style.backgroundImage = `url('Project_images/img${num}.png')`;
     for (let i = 1; i <= 6; i++) {
         document.getElementById(`slider_btn${i}`).style.backgroundColor = "white";
     }
 
-    document.getElementById(`slider_btn${num}`).style.backgroundColor = "#c7c6c1";
+    document.getElementById(`slider_btn${num}`).style.backgroundColor = "gold";
 }
 
 for (let i = 1; i <= 6; i++) {
@@ -63,48 +62,55 @@ function left_click() {
 
     let current;
     if (index === 0) {
-        current = 6;
+        index = 5;
         document.getElementById("slider_box").style.backgroundImage = `url("Project_images/img6.png")`;
-        color_change(current);
-        index = current-1;
+        for (let i = 1; i <= 6; i++) {
+            document.getElementById(`slider_btn${i}`).style.backgroundColor = "white";
+        }
+
+        document.getElementById(`slider_btn${index + 1}`).style.backgroundColor = "gold";
     }
     else {
-        current = index - 1;
-        if (current == 1) {
-            document.getElementById("slider_box").style.backgroundImage = `url("Project_images/img${current}.jpg")`;
+        index--;
+        document.getElementById("slider_box").style.backgroundImage = `url("Project_images/img${index + 1}.png")`;
+        for (let i = 1; i <= 6; i++) {
+            document.getElementById(`slider_btn${i}`).style.backgroundColor = "white";
         }
-        else {
-            document.getElementById("slider_box").style.backgroundImage = `url("Project_images/img${current}.png")`;
-        }
-        color_change(current);
-        index = current;
+
+        document.getElementById(`slider_btn${index + 1}`).style.backgroundColor = "gold";
+
     }
 }
 
 document.getElementById("left_btn").addEventListener("click", left_click);
 
-function right_click()
-{
-    let current;
-    if(index===6)
-    {
-        current=1;
-        document.getElementById("slider_box").style.backgroundImage = `url("Project_images/img1.jpg")`;
-        color_change(current);
+function right_click() {
+    if (index === 5) {
         index = 0;
+
+        document.getElementById("slider_box").style.backgroundImage = `url("Project_images/img1.png")`;
+
+        for (let i = 1; i <= 6; i++) {
+            document.getElementById(`slider_btn${i}`).style.backgroundColor = "white";
+        }
+
+        document.getElementById(`slider_btn1`).style.backgroundColor = "gold";
     }
-    else
-    {
-        current=index+1;
-        document.getElementById("slider_box").style.backgroundImage = `url("Project_images/img${current}.png")`;
-        color_change(current);
-        index = index+1;
+    else {
+        index++;
+        document.getElementById("slider_box").style.backgroundImage = `url("Project_images/img${index + 1}.png")`;
+
+        for (let i = 1; i <= 6; i++) {
+            document.getElementById(`slider_btn${i}`).style.backgroundColor = "white";
+        }
+
+        document.getElementById(`slider_btn${index + 1}`).style.backgroundColor = "gold";
     }
 }
 document.getElementById("right_btn").addEventListener("click", right_click);
 
 function fun_rep() {
-    
+
     fun_array[index]();
 
     index = (index + 1) % fun_array.length;
